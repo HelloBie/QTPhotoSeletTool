@@ -57,7 +57,9 @@ static QTPhotoSeletTool* _instance = nil;
         [[self shareInstance].paramsDic removeObjectForKey:NSStringFromClass(vc.class)];
         [self shareInstance].currentVC = nil;
     }]];
-    [vc presentViewController:controller animated:YES completion:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [vc presentViewController:controller animated:YES completion:nil];
+    });
     [self shareInstance].paramsDic[NSStringFromClass(vc.class)] = @{
         @"block":resultHandle
     };
@@ -90,7 +92,9 @@ static QTPhotoSeletTool* _instance = nil;
         [[self shareInstance].paramsDic removeObjectForKey:NSStringFromClass(vc.class)];
         [self shareInstance].currentVC = nil;
     }]];
-    [vc presentViewController:controller animated:YES completion:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [vc presentViewController:controller animated:YES completion:nil];
+    });
     [self shareInstance].paramsDic[NSStringFromClass(vc.class)] = @{
         @"block":resultHandle
     };
