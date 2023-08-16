@@ -218,6 +218,11 @@ static QTPhotoSeletTool* _instance = nil;
 
 #pragma mark - 单例相关
 
+/// 建议在适当的时候提前调用此初始化方法,可以避免弹窗延迟
++ (void)initManager{
+    [self shareInstance];
+}
+
 + (instancetype)shareInstance {
     static dispatch_once_t onceToken ;
     dispatch_once(&onceToken, ^{

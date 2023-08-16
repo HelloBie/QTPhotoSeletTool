@@ -49,6 +49,9 @@
 + (void)confirmAlbumPermissionsWithViewController:(UIViewController *)vc
                                   authorizedBlock:(void(^)(void))authorizedHandle
                                 unauthorizedBlock:(void(^)(PHAuthorizationStatus status))unauthorizedHandler;
+
+/// 建议在适当的时候提前调用此初始化方法,可以避免弹窗延迟
++ (void)initManager;
 @end
 
 
