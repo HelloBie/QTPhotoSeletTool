@@ -14,6 +14,14 @@
 
 @implementation ViewController
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // 提前调用,避免弹窗延迟
+    [QTPhotoSeletTool initManager];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

@@ -15,8 +15,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // 提前调用,避免弹窗延迟
-    [QTPhotoSeletTool initManager];
     // Override point for customization after application launch.
     return YES;
 }
