@@ -7,3 +7,4 @@
         self.showImageView.image = resultImage;
     } unauthorizedBlock:nil];
 
+支持cocoapods: pod 'QTPhotoSeletTool'
